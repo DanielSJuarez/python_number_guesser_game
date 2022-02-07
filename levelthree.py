@@ -17,6 +17,8 @@ while play == True:
     elif int(player) < computer:
         print(computer, 'Computer guessed Low! ', turn, 'guess remaining!')
         turn = turn - 1
+        computer = randint(1,computer)
     elif int(player) > computer:
         print(computer, 'Computer', turn, 'guesses remaining!')
         turn = turn - 1
+        computer = randint(computer,10)
