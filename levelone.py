@@ -16,10 +16,10 @@ while play == True:
         print('You Lose!')
         play = False
     elif int(player) < computer:
-        print('To Low! ', turn, 'guess remaining!')
+        print('To Low!', turn, 'guesses remaining')
         turn = turn - 1
     elif int(player) > computer:
-        print('To High! ', turn, 'guesses remaining!')
+        print('To High!', turn, 'guesses remaining')
         turn = turn - 1
 
         
