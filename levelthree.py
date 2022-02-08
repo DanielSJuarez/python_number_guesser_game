@@ -12,10 +12,10 @@ while play == True:
         print(computer, 'Computer Win! It took this many turns', turn)
         play = False
     elif int(player) < computer:
-        print(computer, 'Computer guessed Low! ', turn, 'guess remaining!')
+        print(computer, 'Computer guessed High!')
         turn = turn + 1
         computer = randint(1,computer)
     elif int(player) > computer:
-        print(computer, 'Computer', turn, 'guesses remaining!')
+        print(computer, 'Computer guessed Low!')
         turn = turn + 1
         computer = randint(computer,10)
