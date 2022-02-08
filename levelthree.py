@@ -9,7 +9,7 @@ computer = randint(1,10)
 while play == True: 
 
     if int(player) == computer:
-        print(computer, 'Computer Win! It took this many turn', turn)
+        print(computer, 'Computer Win! It took this many turns', turn)
         play = False
     elif int(player) < computer:
         print(computer, 'Computer guessed Low! ', turn, 'guess remaining!')
