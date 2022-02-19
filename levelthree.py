@@ -10,7 +10,6 @@ high_number = 10
 
 while play == True:
     computer = math.floor((low_number + high_number) / 2)
-    print(play, turn, high_number, low_number, computer)
     if int(player) == computer:
         print(computer, 'Computer Win! It took this many turns', turn)
         play = False
