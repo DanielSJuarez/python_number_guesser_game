@@ -1,24 +1,27 @@
-from random import randint
+import math
 
-turn = 1
 print('Enter a number between 1 and 10, computer has 3 guesses to win!')
 player = input('1,2,3,4,5,6,7,8,9,10 ')
+
+turn = 1
 play = True
-min_num = 1
-max_num = 10
-computer = (min_num + max_num) // 2  #computer_number = (min_num + max_num) // 2  this floors and guesses 5 to split that guesses then. This is box section
-#min_num, max_num = 1,10 
+low_number = 1
+high_number = 10
 
 while play == True:
-
+    computer = math.floor((low_number + high_number) / 2)
+    print(play, turn, high_number, low_number, computer)
     if int(player) == computer:
         print(computer, 'Computer Win! It took this many turns', turn)
         play = False
+        break
     elif int(player) < computer:
+        turn += 1
+        high_number = computer - 1
         print(computer, 'Computer guessed High!')
-        turn = turn + 1
-        max_num = computer
-    elif int(player) > computer:
+        continue
+    else:
+        turn += 1
+        low_number = computer + 1
         print(computer, 'Computer guessed Low!')
-        turn = turn + 1
-        min_num = computer
+        continue
